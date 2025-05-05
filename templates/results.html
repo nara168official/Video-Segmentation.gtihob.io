@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Segments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Segments</h1>
+        <p>Original file: {{ original }}</p>
+        
+        <h2>Download Segments:</h2>
+        <ul class="segment-list">
+            {% for segment in segments %}
+            <li>
+                {{ segment.name }}
+                <a href="{{ url_for('download_file', filename=segment.name) }}" class="download-btn">Download</a>
+            </li>
+            {% endfor %}
+        </ul>
+        
+        <a href="{{ url_for('index') }}" class="back-btn">Split Another Video</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝑺𝒑𝒍𝒊𝒕 𝒗𝒊𝒅𝒆𝒐</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🆂🅿🅻🅸🆃 🆅🅸🅳🅴🅾</h1>
+        <p>𝙐𝙥𝙡𝙤𝙖𝙙 𝙖 𝙫𝙞𝙙𝙚𝙤 𝙩𝙤 𝙨𝙥𝙡𝙞𝙩 𝙞𝙩 𝙞𝙣𝙩𝙤 𝙨𝙝𝙤𝙧𝙩𝙚𝙧 𝙨𝙚𝙜𝙢𝙚𝙣𝙩𝙨</p>
+        
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">𝙎𝙚𝙡𝙚𝙘𝙩 𝙫𝙞𝙙𝙚𝙤 𝙛𝙞𝙡𝙚:</label>
+                <input type="file" name="file" id="file" accept="video/*" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">𝙎𝙚𝙜𝙢𝙚𝙣𝙩 𝙙𝙪𝙧𝙖𝙩𝙞𝙤𝙣 (𝙨𝙚𝙘𝙤𝙣𝙙𝙨)::</label>
+                <input type="number" name="duration" id="duration" value="60" min="1" required>
+            </div>
+            
+            <button type="submit">𝑼𝒑𝒍𝒐𝒂𝒅 𝒂𝒏𝒅 𝑺𝒑𝒍𝒊𝒕</button>
+        </form>
+    </div>
+</body>
+</html>
